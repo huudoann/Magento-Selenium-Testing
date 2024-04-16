@@ -28,19 +28,16 @@ public class LoginPageTest extends BaseClass {
 	public void tearDown() {
 		getDriver().quit();
 	}
-	@Test(groups = {"Smoke","Sanity"}, dataProvider = "credentials", dataProviderClass = DataProviders.class)
+	@Test(groups = {"Smoke","Sanity"}, dataProvider = "Credentials", dataProviderClass = DataProviders.class)
 	
 	public void loginTest(String uname, String pswd) throws Throwable {
 		Log.startTestCase("loginTest");
 		indexPage= new IndexPage();
-		Log.info("user is going to click on SignIn");
 		loginPage=indexPage.clickOnSignIn();
-		Log.info("Enter Username and Password");
 		homePage=loginPage.signIn(uname,pswd,homePage);
 	    String actualURL=homePage.getCurrURL();
 	    String expectedURL1="http://automationpractice.com/index.php?controller=my-account";
 	    String expectedURL2="https://magento.softwaretestingboard.com/";
-	    Log.info("Verifying if user is able to login");
 	    Assert.assertTrue(actualURL.equals(expectedURL1) || actualURL.equals(expectedURL2), "Actual URL is neither expected URL1 nor expected URL2");
 	    Log.info("Login is Sucess");
 	    Log.endTestCase("loginTest");

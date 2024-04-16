@@ -12,6 +12,7 @@ import com.mystore.pageobjects.HomePage;
 import com.mystore.pageobjects.IndexPage;
 import com.mystore.pageobjects.LoginPage;
 import com.mystore.pageobjects.SearchResultPage;
+import com.mystore.utility.Log;
 
 public class AddToCartPageTest extends BaseClass{
 	private IndexPage index;
@@ -33,6 +34,7 @@ public class AddToCartPageTest extends BaseClass{
 	
 	@Test(groups = { "Sanity", "Regression"})
 	public void addToCartTest() throws Throwable {
+		Log.startTestCase("addToCartPageTest");
 		index = new IndexPage();
 		loginPage = index.clickOnSignIn();
 		homePage = loginPage.signIn(prop.getProperty("username"), prop.getProperty("password"), homePage);
@@ -43,5 +45,6 @@ public class AddToCartPageTest extends BaseClass{
 		addToCardPage.clickOnAddToCart();
 		boolean result = addToCardPage.validateAddtoCart();
 		Assert.assertTrue(result);
+		Log.endTestCase("addToCartPageTest");
 	}
 }

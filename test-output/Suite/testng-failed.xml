@@ -3,25 +3,21 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="Edge"/>
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.mystore.testcases.OrderPageTest">
+      <class name="com.mystore.testcases.LoginPageTest">
         <methods>
-          <include name="setup"/>
+          <include name="tearDown"/>
           <include name="loadConfig"/>
           <include name="afterSuite"/>
-          <include name="verifyTotalPrice"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.mystore.testcases.OrderPageTest -->
-      <class name="com.mystore.testcases.AccountCreationPageTest">
-        <methods>
-          <include name="loadConfig"/>
-          <include name="afterSuite"/>
-          <include name="signUpTest"/>
+          <include name="loginTest"/>
           <include name="setup"/>
-          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.mystore.testcases.AccountCreationPageTest -->
+      </class> <!-- com.mystore.testcases.LoginPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

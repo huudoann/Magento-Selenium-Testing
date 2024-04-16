@@ -14,12 +14,12 @@
         <protocol>http</protocol>
         
         <!-- title of the document -->
-        <documentTitle>MyStoreProject</documentTitle>
+        <documentTitle>SeleniumEcommerceProject</documentTitle>
         
         <!-- report name - displayed at top-nav -->
-        <reportName>MyStoreProject Report
+        <reportName>SeleniumEcommerceProject Report
          <![CDATA[
-                <img src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/Logo/MyStore.png'/>
+                <img src='C:\Users\huudo\eclipse-workspace\SeleniumEcommerceProject\Logo\logo.png'/>
             ]]>
         </reportName>
         

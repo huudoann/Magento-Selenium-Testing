@@ -13,6 +13,7 @@ import com.mystore.base.BaseClass;
 import com.mystore.pageobjects.HomePage;
 import com.mystore.pageobjects.IndexPage;
 import com.mystore.pageobjects.SearchResultPage;
+import com.mystore.utility.Log;
 
 /**
  * 
@@ -35,9 +36,11 @@ public class SearchResultPageTest extends BaseClass{
 	
 	@Test(groups = "Smoke")
 	public void productAvailabilityTest() throws Throwable{
+		Log.startTestCase("productAvalabilityTest");
 		indexPage = new IndexPage();
 		searchResultPage = indexPage.searchProduct("Shirt");
 		boolean result = searchResultPage.isProductAvailable();
 		Assert.assertTrue(result);
+		Log.endTestCase("productAvalabilityTest");
 	}
 }

@@ -10,6 +10,7 @@ import com.mystore.base.BaseClass;
 import com.mystore.pageobjects.AccountCreationPage;
 import com.mystore.pageobjects.HomePage;
 import com.mystore.pageobjects.IndexPage;
+import com.mystore.utility.Log;
 
 public class AccountCreationPageTest extends BaseClass{
 	IndexPage indexPage;
@@ -27,20 +28,24 @@ public class AccountCreationPageTest extends BaseClass{
 		getDriver().quit();
 	}
 	
-	@Test(groups = "Sanity")
+	@Test(groups = "Smoke")
 	public void verifyAccountCreationPageTest() throws Throwable{
+		Log.startTestCase("verifyAccountCreactionPageTest");
 		indexPage = new IndexPage();
 		accountCreationPage = indexPage.clickOnSignUp();
 		boolean result= accountCreationPage.validateAccountCreatePage();
 		Assert.assertTrue(result);
+		Log.endTestCase("verifyAccountCreactionPageTest");
 	}
 	
-	@Test(groups = { "Smoke", "Regression" })
+	@Test(groups = { "Sanity" })
 	public void signUpTest() throws Throwable{
+		Log.startTestCase("signUpTest");
 		indexPage = new IndexPage();
 		accountCreationPage = indexPage.clickOnSignUp();
 	    homePage = accountCreationPage.signUpNewAccount(prop.getProperty("firstName"), prop.getProperty("lastName"), prop.getProperty("email"), prop.getProperty("pswd"), prop.getProperty("pswd"), homePage);
 		String actualURL = homePage.getCurrURL();
 		Assert.assertEquals(actualURL, "https://magento.softwaretestingboard.com/customer/account/");
+		Log.endTestCase("signUpTest");
 	}
 }

@@ -16,6 +16,7 @@ import com.mystore.pageobjects.LoginPage;
 import com.mystore.pageobjects.OrderConfirmationPage;
 import com.mystore.pageobjects.OrderPage;
 import com.mystore.pageobjects.SearchResultPage;
+import com.mystore.utility.Log;
 
 public class OrderConfirmationPageTest extends BaseClass{
 	IndexPage index;
@@ -41,6 +42,7 @@ public class OrderConfirmationPageTest extends BaseClass{
 	
 	@Test(groups = "Regression")
 	public void verifyConfirmOrder() throws Throwable {
+		Log.startTestCase("verifyConfirmOrder");
 		index = new IndexPage();
 		loginPage = index.clickOnSignIn();
 		homePage = loginPage.signIn(prop.getProperty("username"), prop.getProperty("password"), homePage);
@@ -57,5 +59,6 @@ public class OrderConfirmationPageTest extends BaseClass{
 		Thread.sleep(2000);
 		boolean result = orderConfirmationPage.validateOrderMessage();
 		Assert.assertTrue(result);
+		Log.endTestCase("verifyConfirmOrder");
 	}
 }

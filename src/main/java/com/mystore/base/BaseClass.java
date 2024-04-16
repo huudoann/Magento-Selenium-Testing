@@ -10,7 +10,7 @@ import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -62,16 +62,16 @@ public class BaseClass {
 			WebDriverManager.edgedriver().setup();
 			driver.set( new EdgeDriver());
 			
-		} else if (browserName.equalsIgnoreCase("Firefox")) {
-			
-			WebDriverManager.firefoxdriver().setup();
-			driver.set(new FirefoxDriver());
-			
-		}
+		} 
+//		else if (browserName.equalsIgnoreCase("Firefox")) {
+//			
+//			WebDriverManager.firefoxdriver().setup();
+//			driver.set(new FirefoxDriver());
+//			
+//		}
+		
 		getDriver().manage().window().maximize();
-		
 		getDriver().manage().deleteAllCookies();
-		
 		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(2000));
 		getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
 		getDriver().manage().timeouts().scriptTimeout(Duration.ofSeconds(60));

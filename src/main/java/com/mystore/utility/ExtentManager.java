@@ -18,7 +18,7 @@ public class ExtentManager {
 		extent = new ExtentReports();
 		extent.attachReporter(sparkReporter);
 		
-		extent.setSystemInfo("HostName", "MyHost");
+		extent.setSystemInfo("HostName", "Host");
 		extent.setSystemInfo("ProjectName", "SeleniumEcommerceProject");
 		extent.setSystemInfo("Tester", "HuuDoann");
 		extent.setSystemInfo("OS", "Win11");

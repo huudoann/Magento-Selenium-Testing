@@ -8,6 +8,7 @@ import org.testng.Assert;
 
 import com.mystore.base.BaseClass;
 import com.mystore.pageobjects.IndexPage;
+import com.mystore.utility.Log;
 
 public class IndexPageTest extends BaseClass{
 	IndexPage indexPage;
@@ -23,16 +24,20 @@ public class IndexPageTest extends BaseClass{
 		getDriver().quit();
 	}
 	
-	@Test
+	@Test(groups = "Smoke")
 	public void verifyLogo() throws Throwable{
+		Log.startTestCase("verifyLogo");
 		indexPage = new IndexPage();
 		boolean result = indexPage.validateLogo();
 		Assert.assertTrue(result);
+		Log.endTestCase("verifyLogo");
 	}
 	
-	@Test
+	@Test(groups = "Smoke")
 	public void verifyTitle() {
+		Log.startTestCase("verifyTitle");
 		String title = indexPage.getStoreTitle();
 		Assert.assertEquals(title, "Home Page");
+		Log.endTestCase("verifyTitle");
 	}
 }
