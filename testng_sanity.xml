@@ -9,14 +9,14 @@
 			</run>
 		</groups>
     <classes>
-      <class name="com.mystore.testcases.LoginPageTest"/>
-      <class name="com.mystore.testcases.AccountCreationPageTest"/>
-      <class name="com.mystore.testcases.IndexPageTest"/>
-      <class name="com.mystore.testcases.SearchResultPageTest"/>
-      <class name="com.mystore.testcases.HomePageTest"/>
-      <class name="com.mystore.testcases.OrderConfirmationPageTest"/>
-      <class name="com.mystore.testcases.OrderPageTest"/>
-      <class name="com.mystore.testcases.AddToCartPageTest"/>
+      <class name="com.sele.testcases.LoginPageTest"/>
+      <class name="com.sele.testcases.AccountCreationPageTest"/>
+      <class name="com.sele.testcases.IndexPageTest"/>
+      <class name="com.sele.testcases.SearchResultPageTest"/>
+      <class name="com.sele.testcases.HomePageTest"/>
+      <class name="com.sele.testcases.OrderConfirmationPageTest"/>
+      <class name="com.sele.testcases.OrderPageTest"/>
+      <class name="com.sele.testcases.AddToCartPageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

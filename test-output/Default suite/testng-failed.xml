@@ -3,7 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mystore.testcases.LoginPageTest">
+      <class name="com.sele.testcases.LoginPageTest">
         <methods>
           <include name="tearDown"/>
           <include name="loadConfig"/>
@@ -11,7 +11,7 @@
           <include name="loginTest" invocation-numbers="0"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.mystore.testcases.LoginPageTest -->
+      </class> <!-- com.sele.testcases.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

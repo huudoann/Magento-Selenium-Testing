@@ -5,11 +5,11 @@
     <parameter name="browser" value="Edge"/>
     <groups>
       <run>
-        <include name="Smoke"/>
+        <include name="Sanity"/>
       </run>
     </groups>
     <classes>
-      <class name="com.mystore.testcases.LoginPageTest">
+      <class name="com.sele.testcases.LoginPageTest">
         <methods>
           <include name="tearDown"/>
           <include name="loadConfig"/>
@@ -17,7 +17,16 @@
           <include name="loginTest"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.mystore.testcases.LoginPageTest -->
+      </class> <!-- com.sele.testcases.LoginPageTest -->
+      <class name="com.sele.testcases.AccountCreationPageTest">
+        <methods>
+          <include name="loadConfig"/>
+          <include name="afterSuite"/>
+          <include name="signUpTest"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.sele.testcases.AccountCreationPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
