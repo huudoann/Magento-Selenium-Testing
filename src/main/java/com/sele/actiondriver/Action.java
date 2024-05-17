@@ -117,7 +117,7 @@ public class Action extends BaseClass implements ActionInterface {
 	/**
 	 * Type text at location
 	 * 
-	 * @param locatorName
+	 * @param ele
 	 * @param text
 	 * @return - true/false
 	 */
@@ -167,14 +167,14 @@ public class Action extends BaseClass implements ActionInterface {
 	/**
 	 * select value from DropDown by using selectByIndex
 	 * 
-	 * @param locator     : Action to be performed on element (Get it from Object
+//	 * @param locator     : Action to be performed on element (Get it from Object
 	 *                    repository)
 	 * 
 	 * @param index       : Index of value wish to select from dropdown list.
-	 * 
-	 * @param locatorName : Meaningful name to the element (Ex:Year Dropdown, items
+	 *
+//	 * @param locatorName : Meaningful name to the element (Ex:Year Dropdown, items
 	 *                    Listbox etc..)
-	 * 
+	 *
 	 */
 	@Override
 	public boolean selectByIndex(WebElement element, int index) {
@@ -198,12 +198,12 @@ public class Action extends BaseClass implements ActionInterface {
 	/**
 	 * select value from DD by using value
 	 * 
-	 * @param locator     : Action to be performed on element (Get it from Object
+//	 * @param locator     : Action to be performed on element (Get it from Object
 	 *                    repository)
 	 * 
 	 * @param value       : Value wish to select from dropdown list.
 	 * 
-	 * @param locatorName : Meaningful name to the element (Ex:Year Dropdown, items
+//	 * @param locatorName : Meaningful name to the element (Ex:Year Dropdown, items
 	 *                    Listbox etc..)
 	 */
 
@@ -230,12 +230,12 @@ public class Action extends BaseClass implements ActionInterface {
 	/**
 	 * select value from DropDown by using selectByVisibleText
 	 * 
-	 * @param locator     : Action to be performed on element (Get it from Object
+//	 * @param locator     : Action to be performed on element (Get it from Object
 	 *                    repository)
 	 * 
 	 * @param visibletext : VisibleText wish to select from dropdown list.
 	 * 
-	 * @param locatorName : Meaningful name to the element (Ex:Year Dropdown, items
+//	 * @param locatorName : Meaningful name to the element (Ex:Year Dropdown, items
 	 *                    Listbox etc..)
 	 */
 
@@ -769,7 +769,7 @@ public class Action extends BaseClass implements ActionInterface {
 			e.getMessage();
 		}
 		// This new path for jenkins
-		String newImageString = "http://localhost:8082/job/SeleniumEcommerceProject/ws/SeleniumEcommerceProject/ScreenShots/" + filename + "_"
+		String newImageString = "http://localhost:8082/job/Selenium-Ecommerce-Project/ws/Selenium-Ecommerce-Project/ScreenShots/" + filename + "_"
 				+ dateName + ".png";
 		return newImageString;
 	}
