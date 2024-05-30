@@ -1,8 +1,6 @@
 package com.sele.testcases;
-
 import org.testng.annotations.*;
 import org.testng.Assert;
-
 import com.sele.base.BaseClass;
 import com.sele.pageobjects.IndexPage;
 import com.sele.utility.Log;

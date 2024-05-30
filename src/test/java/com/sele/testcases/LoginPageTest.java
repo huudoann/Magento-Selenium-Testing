@@ -37,7 +37,7 @@ public class LoginPageTest extends BaseClass {
 	    String actualURL=homePage.getCurrURL();
 	    String expectedURL1="http://automationpractice.com/index.php?controller=my-account";
 	    String expectedURL2="https://magento.softwaretestingboard.com/";
-		Assert.assertTrue(actualURL.equals(expectedURL1) || actualURL.equals(expectedURL2), "Actual URL is neither expected URL1 nor expected URL2");
+		Assert.assertTrue(actualURL.equals(expectedURL1) || actualURL.equals(expectedURL2), "Your username or password may be wrong!");
 	    Log.info("Login is Sucess");
 	    Log.endTestCase("loginTest");
 	}
